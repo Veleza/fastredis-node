@@ -1,1 +1,1 @@
-exports = require('bindings')('fastredis.node');
+module.exports = require('bindings')('fastredis.node');

@@ -19,8 +19,6 @@ This requires:
 * `gcc` / `g++` 4.8 or newer.
 * `python` 2.7 or any newer 2.x version. `python` 3.x is not supported.
 
-For running on Travis check the bundled [.travis.yml](.travis.yml).
-
 [npm]: https://npmjs.org/
 
 ## Usage

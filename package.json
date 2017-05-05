@@ -1,7 +1,7 @@
 {
   "name": "fastredis",
   "description": "Fast node wrapper around hiredis to get data as fast as possible",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "http://github.com/Veleza/fastredis-node",
   "author": "Vytautas Povilaitis <vytautas@veleza.com>",
   "contributors": [

@@ -112,8 +112,6 @@ void Connection::Select(const FunctionCallbackInfo<Value>& args) {
 }
 
 void Connection::Get(const FunctionCallbackInfo<Value>& args) {
-    clock_t t;
-    t = clock();
     Isolate* isolate = args.GetIsolate();
 
     Connection* obj = ObjectWrap::Unwrap<Connection>(args.Holder());
@@ -124,16 +122,11 @@ void Connection::Get(const FunctionCallbackInfo<Value>& args) {
     char* cmd = (char*) malloc(strlen(key) + 8);
     sprintf(cmd, "GET %s", key);
     redisReply* reply = (redisReply*) redisCommand(obj->ctx_, cmd);
-    char* response = strdup(reply->str);
+    if (reply->str) {
+        args.GetReturnValue().Set(String::NewFromUtf8(isolate, reply->str));
+    }
     freeReplyObject(reply);
     free(cmd);
-
-    args.GetReturnValue().Set(String::NewFromUtf8(isolate, response));
-
-    t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC;
-    printf("fun() took %f seconds to execute \n", time_taken);
-
 }
 
 }  // namespace fastredis

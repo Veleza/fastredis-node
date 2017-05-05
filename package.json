@@ -1,0 +1,26 @@
+{
+  "name": "fastredis",
+  "description": "Fast node wrapper around hiredis to get data as fast as possible",
+  "version": "0.5.0",
+  "homepage": "http://github.com/Veleza/fastredis-node",
+  "author": "Vytautas Povilaitis <vytautas@veleza.com>",
+  "contributors": [
+    "Vytautas Povilaitis <vytautas@veleza.com>"
+  ],
+  "main": "fastredis",
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "nan": "^2.3.4"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Veleza/fastredis-node"
+  },
+  "bugs": {
+    "url": "https://github.com/Veleza/fastredis-node/issues"
+  },
+  "license": "BSD-3-Clause"
+}
